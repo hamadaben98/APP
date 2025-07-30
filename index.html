@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ahmed TV - Live Morocco</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 20px;
+    }
+    h1 {
+      color: #00c853;
+    }
+    .buttons {
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    button {
+      background: #222;
+      border: 1px solid #00c853;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #00c853;
+      color: #000;
+    }
+    iframe {
+      width: 90%;
+      max-width: 960px;
+      height: 540px;
+      border: none;
+      margin-top: 20px;
+    }
+    footer {
+      background-color: #1a1a1a;
+      padding: 10px;
+      margin-top: 20px;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📺 Ahmed TV - Live Streaming Morocco</h1>
+    <p>Live Moroccan Channels</p>
+  </header>
+
+  <div class="buttons">
+    <button onclick="switchStream('https://www.elahmad.com/tv/radiant.php?id=2m_monde')">2M TV</button>
+    <button onclick="switchStream('https://www.elahmad.com/tv/mobiletv/glarb.php?id=aloula1')">Al Aoula</button>
+    <button onclick="switchStream('https://www.elahmad.com/tv/radiant.php?id=medi1tv')">Medi1 TV</button>
+  </div>
+
+  <iframe id="liveFrame" src="https://www.youtube.com/embed/live_stream?channel=UCYslzQ-oaNw5_GaH9XCH8AQ" allowfullscreen></iframe>
+
+  <footer>© 2025 Ahmed TV | Educational Demo Only</footer>
+
+  <script>
+    function switchStream(url) {
+      document.getElementById('liveFrame').src = url;
+    }
+  </script>
+
+</body>
+</html>
